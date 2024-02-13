@@ -24,7 +24,7 @@ public class StringUtils {
 
     @NotNull
     public static String replacePlaceholders(final @NotNull String input, final @NotNull Player player) {
-        String replaced = input.replace("%current_count%", LumberJackManager.getPlayerCount(player).toString());
+        String replaced = input.replace("%current_count%", (LumberJackManager.getPlayerCount(player).toString() + "/" + DataManager.getCount()));
         replaced = replaced.replace("%reward%", DataManager.getReward().toString());
         return replaced;
     }

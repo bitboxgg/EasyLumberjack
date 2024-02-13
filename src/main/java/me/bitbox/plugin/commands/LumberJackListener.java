@@ -37,6 +37,9 @@ public class LumberJackListener implements Listener {
                     break;
                 }
                 case LEFT_CLICK_BLOCK: {
+                    if(event.getPlayer().isSneaking()) {
+                        return;
+                    }
                     if (LumberJackManager.isItTree(block.getLocation())) {
                         LumberJackManager.removeTree(block.getLocation());
                         LumberJackManager.destroyTree(block.getLocation());

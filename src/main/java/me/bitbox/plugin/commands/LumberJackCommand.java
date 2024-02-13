@@ -27,6 +27,7 @@ public class LumberJackCommand implements Command {
                         player.sendMessage(colorize("&aYou've entered setup mode."));
                         player.sendMessage(colorize("&7 ⋇ Click on block that you want to place a tree."));
                         player.sendMessage(colorize("&7 ⋇ Break to remove tree."));
+                        player.sendMessage(colorize("&7 ⋇ Shift + Break to just break block."));
                         player.sendMessage(text(colorize("&7 ⋇ &aClick&7 or write '/elj stop' to stop setup mode")).clickEvent(ClickEvent.runCommand("/elj stop")));
 
                         LumberJackManager.addEditingPlayer(player);
