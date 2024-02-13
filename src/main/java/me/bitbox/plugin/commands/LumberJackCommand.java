@@ -15,11 +15,11 @@ import static net.kyori.adventure.text.Component.text;
 public class LumberJackCommand implements Command {
     @Override
     public void run(Player player, String[] args) {
-        if (args != null) {
+        if (args != null && args.length > 0) {
             switch (args[0]) {
                 case "setup": {
                     if (player.hasPermission("easylumberjack.setup")) {
-                        if(LumberJackManager.isPlayerEditing(player)) {
+                        if (LumberJackManager.isPlayerEditing(player)) {
                             player.sendMessage(colorize("&cYou're arleady in setup mode"));
                             player.sendMessage(text(colorize("&7 ⋇ &aClick&7 to stop setup mode")).clickEvent(ClickEvent.suggestCommand("elj stop")));
                             return;
@@ -63,7 +63,7 @@ public class LumberJackCommand implements Command {
 
     @Override
     public List<String> tabComplete(Player player, String[] args) {
-        if (args != null) {
+        if (args != null && args.length > 0) {
             List<String> suggestions = new ArrayList<>();
             boolean hasAnyPermission = false;
             if (player.hasPermission("easylumberjack.reload")) {
