@@ -21,13 +21,13 @@ public class LumberJackCommand implements Command {
                     if (player.hasPermission("easylumberjack.setup")) {
                         if (LumberJackManager.isPlayerEditing(player)) {
                             player.sendMessage(colorize("&cYou're arleady in setup mode"));
-                            player.sendMessage(text(colorize("&7 ⋇ &aClick&7 to stop setup mode")).clickEvent(ClickEvent.suggestCommand("elj stop")));
+                            player.sendMessage(text(colorize("&7 ⋇ &aClick&7 to stop setup mode")).clickEvent(ClickEvent.runCommand("/elj stop")));
                             return;
                         }
                         player.sendMessage(colorize("&aYou've entered setup mode."));
                         player.sendMessage(colorize("&7 ⋇ Click on block that you want to place a tree."));
                         player.sendMessage(colorize("&7 ⋇ Break to remove tree."));
-                        player.sendMessage(text(colorize("&7 ⋇ &aClick&7 or write '/elj stop' to stop setup mode")).clickEvent(ClickEvent.suggestCommand("elj stop")));
+                        player.sendMessage(text(colorize("&7 ⋇ &aClick&7 or write '/elj stop' to stop setup mode")).clickEvent(ClickEvent.runCommand("/elj stop")));
 
                         LumberJackManager.addEditingPlayer(player);
                     } else {
@@ -58,6 +58,11 @@ public class LumberJackCommand implements Command {
                     break;
                 }
             }
+        } else {
+            player.sendMessage(colorize("&aCommands"));
+            player.sendMessage(colorize("&7 ⋇ setup - start setup mode."));
+            player.sendMessage(colorize("&7 ⋇ stop - end setup mode."));
+            player.sendMessage(colorize("&7 ⋇ reload - reloads config file."));
         }
     }
 
