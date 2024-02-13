@@ -1,0 +1,13 @@
+me\bitbox\core\utils\DataManager.class
+me\bitbox\plugin\listeners\PlayerListener.class
+me\bitbox\core\utils\Config.class
+me\bitbox\core\Server.class
+me\bitbox\core\commands\CommandManager.class
+me\bitbox\EasyLumberjack.class
+me\bitbox\core\commands\CommandManager$1.class
+me\bitbox\plugin\commands\LumberJackCommand.class
+me\bitbox\plugin\commands\LumberJackListener.class
+me\bitbox\core\commands\Command.class
+me\bitbox\plugin\utils\LumberJackManager.class
+me\bitbox\core\utils\StringUtils.class
+me\bitbox\plugin\commands\LumberJackListener$1.class

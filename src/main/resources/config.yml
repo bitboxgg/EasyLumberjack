@@ -1,0 +1,14 @@
+# EASY LUMBERJACK PLUGIN
+# THIS PLUGIN USES VAULT API
+# 1.16.1 + PLUGIN
+
+lumberjack:
+  # How many times you need to break log to get reward.
+  count: 3
+  # How much money you get for that.
+  reward: 100
+messages:
+  # That message sending to player when breaking a tree log from data.yml.
+  break-log-count: "&8You need to break it %current_count% times."
+  # That message sending to player when he completely break tree and get reward.
+  break-tree-reward: "&7You are break a tree and get %reward%."

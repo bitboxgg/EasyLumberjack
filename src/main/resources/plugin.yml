@@ -1,0 +1,13 @@
+name: EasyLumberjack
+version: '${project.version}'
+main: me.bitbox.EasyLumberjack
+api-version: '1.16'
+author: BITBOX
+depend: [Vault]
+commands:
+  lumberjack:
+    aliases:
+      - lj
+      - elj
+      - easylumberjack
+    description: "LumberJack Main command"
