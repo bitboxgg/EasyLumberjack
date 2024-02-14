@@ -17,7 +17,7 @@ public class CommandManager {
             EasyLumberjack.getInstance().getLogger().info("Command not found");
             return;
         }
-        command.setExecutor((player, command1, s, args) -> {
+        command.setExecutor((player, __, ___, args) -> {
             if (!(player instanceof Player)) return false;
             commandExecutor.run((Player) player, args);
             return true;

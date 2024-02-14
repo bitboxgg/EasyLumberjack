@@ -3,7 +3,7 @@ package me.bitbox.core.utils;
 import me.bitbox.EasyLumberjack;
 import org.bukkit.configuration.file.FileConfiguration;
 
-public class DataManager {
+public class ConfigSettings {
     private static final FileConfiguration config = EasyLumberjack.getInstance().getConfig();
 
     public static Integer getReward() {

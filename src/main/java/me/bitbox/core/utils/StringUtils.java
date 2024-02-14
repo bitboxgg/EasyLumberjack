@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtils {
-    // THIS CODE FROM DELUXE MENUS
     private final static Pattern HEX_PATTERN = Pattern
             .compile("&(#[a-f0-9]{6})", Pattern.CASE_INSENSITIVE);
 
@@ -24,8 +23,8 @@ public class StringUtils {
 
     @NotNull
     public static String replacePlaceholders(final @NotNull String input, final @NotNull Player player) {
-        String replaced = input.replace("%current_count%", (LumberJackManager.getPlayerCount(player).toString() + "/" + DataManager.getCount()));
-        replaced = replaced.replace("%reward%", DataManager.getReward().toString());
+        String replaced = input.replace("%current_count%", (LumberJackManager.getPlayerCount(player).toString() + "/" + ConfigSettings.getCount()));
+        replaced = replaced.replace("%reward%", ConfigSettings.getReward().toString());
         return replaced;
     }
 }
